@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Rocky Mountains",
+        "coverImg": "sunrise.JPG",
+        "url": "rockymountains"
+    },
+    {
+        "title": "Swiss Alps",
+        "coverImg": "glacier.JPG",
+        "url": "europe"
+    },
+    {
+        "title": "Mid Atlantic Ridge",
+        "coverImg": "valley.JPG",
+        "url": "midatlanticridge"
+    }
+]
