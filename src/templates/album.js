@@ -8,7 +8,7 @@ export default ({ data }) => {
   console.log(data)
   return (
     <Layout>
-      <div className="wrapper"> 
+      <div className="album-wrapper"> 
         {data.markdownRemark.frontmatter.images.map(image => {
             console.log(image);
           return (

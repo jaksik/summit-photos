@@ -6,8 +6,10 @@ import "./style.css"
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `white`,
+      background: ``,
       marginBottom: `1.45rem`,
+      zIndex: `1`,
+      position: `fixed`,
     }}
   >
     <div
@@ -24,7 +26,7 @@ const Header = ({ siteTitle }) => (
             textDecoration: `none`,
           }}
         >
-          {siteTitle}
+          {/* {siteTitle} */}
         </Link>
       </h1>
       {/* <Link to="/contact" className="nav-item">Contact</Link>

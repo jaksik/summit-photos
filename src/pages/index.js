@@ -21,41 +21,49 @@ const IndexPage = ({ data }) => {
     <Link to="/page-2/">Go to page 2</Link> */}
     {/* <h4 style={{marginLeft: `1.0875rem` }}>Experience The Summit</h4> */}
 
+    {/* Fixed landing page image     */}
+    <div id="cover-img">
+      <div id="cover-overlay"></div>
+      <div class="hero-text">
+      <h3>Photography by</h3>
+        <h1 style={{fontSize:`50px`}}>Connor Jaksik</h1>
+      </div>
+    </div>
 
-    {/** Map through cover images */}
-    {projects.map(project => {
+    <div class="collections-container">
+      <h2 id="collections-header">Collections</h2>
 
-      console.log(project);
-      console.log(coverImgData);
+      {/** Map through cover images */}
+      {projects.map(project => {
 
-      const image = coverImgData.find(n => {
-          return n.node.relativePath === `coverImgs/${project.coverImg}`;
-      });
-      console.log("image:", image.node);
-      const imageSizes = image.node.childImageSharp.sizes;
+        const image = coverImgData.find(n => {
+            return n.node.relativePath === `coverImgs/${project.coverImg}`;
+        });
 
-      return (
-        <AniLink fade to={"/albums/" + project.url}>
-          <div class="cover-img">
-            <div class="overlay">
-              <div class="text">
-                <h3>{project.title}</h3>
+        const imageSizes = image.node.childImageSharp.sizes;
+
+        return (
+          <AniLink fade to={"/albums/" + project.url}>
+            <div class="cover-img">
+              <div class="overlay">
+                <div class="text">
+                  <h3>{project.title}</h3>
+                </div>
               </div>
+              <Img
+                  title={project.name}
+                  alt="Screenshot of Project"
+                  sizes={imageSizes}
+                  className="card-img_src center-block"
+                  imgStyle={{height: `70vh`}}
+                  style={{height: `70vh`}}
+                  durationFadeIn={1000}
+              />
             </div>
-            <Img
-                title={project.name}
-                alt="Screenshot of Project"
-                sizes={imageSizes}
-                className="card-img_src center-block"
-                imgStyle={{height: `70vh`}}
-                style={{height: `70vh`}}
-                durationFadeIn={1000}
-            />
-          </div>
-      </AniLink>
-      )
-
-    })}
+          </AniLink>
+        )
+        })}
+    </div>
 
   </Layout>
 )}

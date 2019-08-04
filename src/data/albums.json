@@ -1,5 +1,15 @@
 [
     {
+        "title": "Climbing",
+        "coverImg": "sunrise.JPG",
+        "url": "rockymountains"
+    },
+    {
+        "title": "Camping",
+        "coverImg": "tent.JPG",
+        "url": "rockymountains"
+    },
+    {
         "title": "Rocky Mountains",
         "coverImg": "sunrise.JPG",
         "url": "rockymountains"
@@ -13,5 +23,10 @@
         "title": "Mid Atlantic Ridge",
         "coverImg": "valley.JPG",
         "url": "midatlanticridge"
+    },
+    {
+        "title": "Urban",
+        "coverImg": "antwerp.JPG",
+        "url": "urban"
     }
 ]
