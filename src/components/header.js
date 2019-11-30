@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import cartImg from "../images/cart.png"
 import "./style.css"
 
 const Header = ({ siteTitle }) => (
@@ -9,7 +10,6 @@ const Header = ({ siteTitle }) => (
       background: ``,
       marginBottom: `1.45rem`,
       zIndex: `1`,
-      position: `fixed`,
     }}
   >
     <div
@@ -27,10 +27,11 @@ const Header = ({ siteTitle }) => (
           }}
         >
           {/* {siteTitle} */}
+          Summit
         </Link>
       </h1>
-      {/* <Link to="/contact" className="nav-item">Contact</Link>
-        <Link to="/about" className="nav-item">About</Link> */}
+      <Link to="/contact" className="nav-item">Contact</Link>
+        <Link to="/cart" className="nav-item"><img src={cartImg} width={35} /></Link>
     </div>
   </header>
 )
